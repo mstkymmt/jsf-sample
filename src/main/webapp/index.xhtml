@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+<h:head>
+    <title>JSF Sample</title>
+</h:head>
+<h:body>
+    <h2>Hello from JSF!</h2>
+    <h:form>
+        <h:inputText value="#{helloBean.name}"/>
+        <h:commandButton value="Say Hello" action="#{helloBean.sayHello}"/>
+    </h:form>
+    <p>#{helloBean.message}</p>
+
+    <h3>Counter:
+        <h:outputText value="#{helloBean.count}"/>
+    </h3>
+    <h:form>
+        <h:commandButton value="Increment Count" action="#{helloBean.incrementCount}"/>
+        <h:commandButton value="Begin Conversation" action="#{helloBean.beginConversation}"
+                         rendered="#{helloBean.transient}"/>
+        <h:commandButton value="End Conversation" action="#{helloBean.endConversation}"
+                         rendered="#{!helloBean.transient}"/>
+    </h:form>
+</h:body>
+</html>
