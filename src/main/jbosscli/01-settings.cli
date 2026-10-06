@@ -1,0 +1,2 @@
+# Reverse Proxy / Load Balancer 対応
+/subsystem=undertow/server=default-server/http-listener=default:write-attribute(name=proxy-address-forwarding,value=true)

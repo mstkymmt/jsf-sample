@@ -1,0 +1,2 @@
+# スレッド数
+/subsystem=io/worker=default:write-attribute(name=task-max-threads,value=${TASK_MAX_THREADS:128})
